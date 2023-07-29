@@ -1,13 +1,13 @@
 :root {
   /* colors */
   --primary: rgb(119, 98, 166);
-  --secondary: #7c7c7c;
+  --secondary: rgb(255, 255, 255);
   --background: rgb(255, 255, 255);
   --surface: rgb(248, 202, 146);
   --on-surface: rgb(194, 194, 194);
   /* fonts sizes and weights */
   --normal: 16px;
-  --medium: 24px;
+  --medium: 22px;
   --large: 32px;
   --extraLarge: 56px;
   --light: 400;
@@ -20,6 +20,8 @@
   --fontSize: var(--normal);
   --fontSizeMedium: var(--medium);
   --fontSizeLarge: var(--large);
+  --lineHeigthSmall: 22px;
+  --lineHeigthLarge: 29px;
 }
 
 body {
@@ -64,4 +66,30 @@ body {
   z-index: 1;
   top: -1%;
   left: -3%;
+}
+.cards-container {
+  display: flex;
+  flex-direction: column;
+  margin: 5rem auto;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  gap: 5rem;
+}
+.card {
+  display: inherit;
+  gap: 3rem;
+  line-height: var(--lineHeigthLarge);
+  border: 1px solid blue;
+}
+.card__image {
+  width: 50%;
+}
+.card__title {
+  color: var(--primary);
+  font-size: var(--fontSizeMedium);
+  font-weight: var(--bold);
+}
+.card__text {
+  margin: 0;
 }
