@@ -22,6 +22,7 @@
   --fontSizeLarge: var(--large);
   --lineHeigthSmall: 22px;
   --lineHeigthLarge: 29px;
+  --borderRadius: 10px;
 }
 
 body {
@@ -80,7 +81,6 @@ body {
   display: inherit;
   gap: 3rem;
   line-height: var(--lineHeigthLarge);
-  border: 1px solid blue;
 }
 .card__image {
   width: 50%;
@@ -92,4 +92,35 @@ body {
 }
 .card__text {
   margin: 0;
+}
+.sub-footer {
+  display: flex;
+}
+.sub-footer__container {
+  background: var(--surface);
+  width: 75%;
+  margin: 5rem auto;
+  padding: 1rem 2.5rem;
+  display: inherit;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  border-radius: var(--borderRadius);
+}
+.sub-footer__title {
+  font-weight: var(--bold);
+  margin-bottom: 0;
+  padding: 0;
+}
+.sub-footer__text {
+  font-size: 0.8rem;
+}
+.sub-footer__button {
+  border: 1px solid black;
+  background: none;
+  border-radius: var(--borderRadius);
+  padding: 0.5rem 0.8rem;
+  font-size: var(--fontSize);
+  margin-bottom: 1rem;
 }
