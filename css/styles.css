@@ -9,6 +9,7 @@
   --normal: 16px;
   --medium: 24px;
   --large: 32px;
+  --extraLarge: 56px;
   --light: 400;
   --regular: 500;
   --bold: 700;
@@ -17,7 +18,7 @@
   --textColor: var(--on-surface);
   --borderRadius: 1rem;
   --fontSize: var(--normal);
-  --fontSizeMedium: var(var(--medium));
+  --fontSizeMedium: var(--medium);
   --fontSizeLarge: var(--large);
 }
 
@@ -27,4 +28,40 @@ body {
   margin: 0;
   padding: 0;
   height: 100vh;
+}
+.container {
+  width: 100%;
+  height: 100%;
+}
+
+.header__container {
+  width: 100%;
+  height: 50%;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header__title {
+  width: 55%;
+  position: absolute;
+  z-index: 2;
+  text-align: center;
+  color: var(--backgroundColor);
+  font-weight: var(--bold);
+  font-size: var(--extraLarge);
+}
+
+.header__container img {
+  object-fit: cover;
+  position: absolute;
+  width: 100%;
+}
+
+.header__image-background__ontop {
+  z-index: 1;
+  top: -1%;
+  left: -3%;
 }
