@@ -1,0 +1,30 @@
+:root {
+  /* colors */
+  --primary: rgb(119, 98, 166);
+  --secondary: #7c7c7c;
+  --background: rgb(255, 255, 255);
+  --surface: rgb(248, 202, 146);
+  --on-surface: rgb(194, 194, 194);
+  /* fonts sizes and weights */
+  --normal: 16px;
+  --medium: 24px;
+  --large: 32px;
+  --light: 400;
+  --regular: 500;
+  --bold: 700;
+  /* rest of the vars */
+  --backgroundColor: var(--background);
+  --textColor: var(--on-surface);
+  --borderRadius: 1rem;
+  --fontSize: var(--normal);
+  --fontSizeMedium: var(var(--medium));
+  --fontSizeLarge: var(--large);
+}
+
+body {
+  background: var(--backgroundColor);
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
