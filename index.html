@@ -15,16 +15,50 @@
   <body>
     <main class="container">
       <header class="header__container">
+        <navbar class="navbar__container">
+          <div class="dropdown__container">
+            <button class="dropdown__btn" id="btn">
+              <img
+                class="dropdown__btn-img"
+                src="./assets/icon_menu.svg"
+                alt="dropdown-menu"
+              />
+            </button>
+            <div class="dropdown__menu" id="dropdown">
+              <a class="option" href="#"> Home </a>
+              <a class="option" href="#"> Equipo </a>
+              <a class="option" href="#"> Servicios </a>
+              <a class="option" href="#"> Contacto </a>
+            </div>
+          </div>
+          <a class="navbar__brand" href="#">
+            <img src="./assets/Personas IT.png" alt="personas it logo" />
+          </a>
+          <ul class="navbar__list menu-content">
+            <li>
+              <a href="">Home</a>
+            </li>
+            <li>
+              <a href="">Equipo</a>
+            </li>
+            <li>
+              <a href="">Servicios</a>
+            </li>
+            <li>
+              <a class="action" href="">Contacto</a>
+            </li>
+          </ul>
+        </navbar>
         <h1 class="header__title">Hablemos sobre Género y Tecnología</h1>
         <img
-          class="header__image-background"
+          class="header__image header__image-background"
           src="./assets/fondo.png"
           alt="background"
         />
         <img
           src="./assets/brillos.png"
           alt="background details"
-          class="header__image-background__ontop"
+          class="header__image header__image-background__ontop"
         />
       </header>
       <section class="cards-container">
@@ -89,5 +123,6 @@
         </span>
       </footer>
     </main>
+    <script src="index.js"></script>
   </body>
 </html>
