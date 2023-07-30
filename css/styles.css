@@ -1,6 +1,6 @@
 :root {
   /* colors */
-  --primary: rgb(119, 98, 166);
+  --primary: rgb(119, 97, 166);
   --primary-light: rgb(235, 232, 242);
   --secondary: rgb(255, 255, 255);
   --background: rgb(255, 255, 255);
@@ -9,7 +9,7 @@
   /* fonts sizes and weights */
   --normal: 16px;
   --medium: 22px;
-  --large: 32px;
+  --large: 26px;
   --extraLarge: 56px;
   --light: 400;
   --regular: 500;
@@ -103,6 +103,7 @@ body {
 }
 .card__text {
   margin: 0;
+  text-align: justify;
 }
 .sub-footer {
   display: flex;
@@ -126,7 +127,7 @@ body {
 }
 .sub-footer__text {
   font-size: 0.8rem;
-  text-align: center;
+  text-align: justify;
 }
 .sub-footer__button {
   border: 1px solid black;
@@ -190,6 +191,7 @@ body {
   justify-content: space-between;
   gap: 1rem;
   list-style: none;
+  padding: 1rem;
 }
 .navbar__list a {
   text-decoration: none;
@@ -213,22 +215,27 @@ body {
   color: var(--on-surface);
 }
 
+.dropdown__container {
+  display: none;
+  margin-left: 1rem;
+}
 .dropdown__btn {
-  /* display: none; */
   display: flex;
   align-items: center;
   justify-content: flex-start;
   column-gap: 0.5rem;
   padding-left: 0.5rem;
-  background: var(--primary);
+  background: transparent;
   border: none;
   cursor: pointer;
   position: relative;
   border-radius: var(--borderRadius);
+  border: 1px solid var(--primary);
   box-shadow: var(--shadow);
   padding: 0.6rem;
   z-index: 5;
 }
+
 .dropdown__menu {
   position: absolute;
   width: 250px;
@@ -237,6 +244,9 @@ body {
   margin-top: 0.3rem;
   background: var(--primary-light);
   z-index: 5;
+  transform: translateY(0.5rem);
+  visibility: hidden;
+  opacity: 0;
 }
 .dropdown__menu a {
   display: flex;
@@ -247,16 +257,22 @@ body {
   color: var(--primary);
 }
 .dropdown__menu a:hover {
-  border: 1px solid var(--primary);
   font-weight: var(--bold);
+}
+.show {
+  transform: translateY(2.5rem);
+  visibility: visible;
+  opacity: 1;
 }
 
 @media screen and (max-width: 800px) {
   .header__container {
     height: 20%;
+    margin-top: 3rem;
   }
   .header__title {
-    font-size: var(--fontSizeMedium);
+    font-size: var(--fontSizeLarge);
+    width: 80%;
   }
   .card {
     display: flex;
@@ -272,11 +288,17 @@ body {
   .footer__text {
     padding: 0;
   }
-  /*   .dropdown__btn {
+  .navbar__list {
+    display: none;
+  }
+  .navbar__container {
+    height: 1.5rem;
+  }
+  .navbar__brand {
+    width: 35%;
+    margin-right: 1rem;
+  }
+  .dropdown__container {
     display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    column-gap: 0.5rem;
-    position: relative;
-  } */
+  }
 }
